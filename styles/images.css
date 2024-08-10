@@ -1,0 +1,25 @@
+.sixerr-img{
+    background-image: url(../images/sixerr.jpeg);
+}
+
+.pintos-img:hover{
+    background-image: url(../images/pintos.png);
+}
+
+.webframework-img:hover{
+    background-image: url(../images/scalaframework.png);
+}
+
+.raft-img:hover{
+    background-image: url(../images/raft.png);
+
+}
+
+.reddit-img:hover{
+    background-image: url(../images/reddit.png);
+}
+
+.ncaa-img:hover{
+    background-image: url(../images/buffalo-basketball.jpg);
+}
+

@@ -1,0 +1,94 @@
+/*Font */
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  }
+  @supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+  }
+
+/*default styles*/
+html {
+    box-sizing: border-box;
+    height:100%;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height:100%;
+    margin:0px;
+    background-color: #2F315C;
+}
+
+/*Individual elements*/
+
+/*|| Nav bar*/
+nav{
+    background-color: black;
+    height: 5%;
+    min-height: 1.2rem;
+    width:100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+nav .button-container{
+    height: 100%;
+    width: 200px;
+    justify-content: space-around;
+    display: flex;
+}
+
+nav a.site-nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+a:link, 
+a:visited, 
+a:focus{
+    color: white;
+}
+
+a:hover{
+    color:lightblue;
+    cursor: pointer;
+
+}
+
+/*Acts as an element with the same height as the nav bar, so each element below spacer will be
+below the nav bar in normal document flow.
+*/
+.spacer{
+    height: 5%;
+    min-height: 1.2rem;
+}
+
+/*|| Footer (appears underneath nav bar if no content exists between <nav> and <footer>)*/
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title> About Me </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- 
+        <link rel="stylesheet" type="text/css" href="experimental.css" />
+        -->
+        <link rel="stylesheet" type="text/css" href="styles/global.css" />
+        <link rel="stylesheet" type="text/css" href="styles/projects.css" />
+        <link rel="stylesheet" type="text/css" href="styles/images.css" />
+        <link rel="stylesheet" type="text/css" href="styles/animation.css" />
+        
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <script src="scripts/global.js" defer></script>
+    </head>
+    <body id = "body">
+        <nav class="site-nav" >
+            <div class= "button-container">
+                <a class="site-nav" href="/"> Jeffrey Xu </a>
+                <a class="site-nav" href="/projects.html"> Projects </a>
+            </div>
+        </nav>
+        <div class="spacer"></div>
+        <main>
+            <div class = "featured" onclick="showDetails('sixerr-page')">
+                <div class = "image-container">
+                    <h2 class = "featured-heading"> Featured </h2>
+                    <p class = "thumbnail-text shadow-pop-tr" id = "featured-text" > 
+                        <b class ="heading" >Sixerr
+                        </b> 
+                        <br>
+                        <br>
+                        <b class ="subtext">
+                            A marketplace site for the Gig Economy.
+                        </b>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <h1> My Coding Projects</h1>
+            <div class = "project">
+                <div class = "thumbnail pintos-img" onclick="showDetails('pintos-page')">
+                    <p class = "thumbnail-text"> 
+                        <b class ="heading" >Pintos
+                        </b> 
+                        <br>
+                        <br>
+                        <b class ="subtext">
+                            A single threaded operating system framework for the 80x86 architecture. 
+                        </b>
+                    </p>
+                </div>
+                <div class = "thumbnail webframework-img" onclick="showDetails('webframework-page')">
+                    <p class = "thumbnail-text"> 
+                        <b class ="heading" >
+                            Custom Web Framework
+                        </b> 
+                        <br>
+                        <br>
+                        <b class ="subtext">
+                            A library of classes and functions implementing and augmenting the HTTP and Websocket protocols. 
+                        </b>
+                    </p>
+                </div>
+                <div class = "thumbnail webframework-img" onclick="showDetails('imagesharing-page')">
+                    <p class = "thumbnail-text"> 
+                        <b class ="heading" >
+                            Image Sharing Site
+                        </b> 
+                        <br>
+                        <br>
+                        <b class ="subtext">
+                            A simple image sharing site that utilizes the web framework that I personally created.
+                        </b>
+                    </p>
+                </div>
+                <div class = "thumbnail reddit-img" onclick="showDetails('reddit-page')">
+                    <p class = "thumbnail-text"> 
+                        <b class ="heading" >
+                            Reddit Content Scraper
+                        </b> 
+                        <br>
+                        <br>
+                        <b class ="subtext">
+                            A web scraper using the beautiful soup library that scrapes the post contents of a user on reddit and stores it in a database.
+                        </b>
+                    </p>
+                </div>
+                <div class = "thumbnail raft-img" onclick="showDetails('raft-page')">
+                    <p class = "thumbnail-text"> 
+                        <b class ="heading" >
+                            Raft Distributed Consensus
+                        </b> 
+                        <br>
+                        <br>
+                        <b class ="subtext">
+                            A Go language implementation of the Raft distributed consensus algorithm.
+                        </b>
+                    </p>
+                </div>
+                <div class = "thumbnail ncaa-img"  onclick="showDetails('ncaa-page')">
+                    <p class = "thumbnail-text"> 
+                        <b class ="heading" >
+                            NCAA Championship Classifier
+                        </b> 
+                        <br>
+                        <br>
+                        <b class ="subtext">
+                            Ranking the most important statistics among NCAA championship qualifying basketball teams over the last 15 years.
+                        </b>
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <a href="/"> Email </a>
+            <a>Linkedin</a>
+            <a> Github</a>
+        </footer>
+
+        <!--Elements below are hidden by default -->
+        <div id="blur-background"></div>
+
+        <div class = "project-details" id="sixerr-page">
+            sixerr-page
+            <button onclick="hideContent('sixerr-page')">Close</button>
+        </div>
+
+        <div class = "project-details" id="pintos-page">
+            <div class= "left-container"> 
+                <h1 class = "project-detail-heading" >Pintos Operating System</h1>
+                <button class = "close" onclick="hideContent('pintos-page')">X</button>
+
+                <img src="images/pintos.png" alt="Pintos Image">
+            </div>
+            <div class= "right-container"> 
+                <p>
+                    <b>Description</b>
+                    A single threaded operating system framework for the 80x86 architecture. This project was done with a team of college classmates. The base code was written by Ben Pfaff, supporting only basic operating systems tasks like FIFO thread scheduling, boot support, and basic peripheral support. 
+                </p>
+                <div class = "middle-container">
+                    <div class = "link-container"> 
+                        <a href="github.com">Github </a>
+                    </div>
+                    <p>
+                        <b>Languages/Technology: </b>
+                        <ul>
+                            <li>C Programming Language</li>
+                            <li>Docker </li>
+                        </ul>
+                    </p>
+                </div>
+
+                <p>
+                    <b>Features Added</b>
+                    <ul>
+                        <li>A priority queue thread scheduler for the Pintos operating system to prevent thread starvation, improve CPU throughput, and enable efficient thread switching.</li>
+
+                        <li>A syscall handler for the Pintos operating system allowing user programs to invoke kernel system calls.</li>
+
+                        <li>Virtual Memory support: an on demand paging system which enables segments of large programs to be swapped between ram and disk.
+                        </li>
+                    </ul>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class = "project-details" id="webframework-page">
+            webframework-page
+            <button onclick="hideContent('webframework-page')">Close</button>
+        </div>
+
+        <div class = "project-details" id="imagesharing-page">
+            imagesharing-page
+            <button onclick="hideContent('imagesharing-page')">Close</button>
+        </div>
+
+        <div class = "project-details" id="reddit-page">
+            reddit-page
+            <button onclick="hideContent('reddit-page')">Close</button>
+        </div>
+
+        <div class = "project-details" id="raft-page">
+            Raft
+            <button onclick="hideContent('raft-page')">Close</button>
+        </div>
+        
+        <div class = "project-details" id="ncaa-page">
+            NCAA
+            <button onclick="hideContent('ncaa-page')">Close</button>
+        </div>
+
+    </body>
+</html>
