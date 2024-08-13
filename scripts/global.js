@@ -10,7 +10,7 @@ function hideAllOpenedProjects(){
         blurBackground.style.visibility = 'hidden';
         blurBackground.style.opacity = '0';
         box.style.display = 'none'
-        bodytag.style.overflow = 'scroll';
+        bodytag.style.overflow = 'auto';
     });
 }
 
@@ -19,7 +19,7 @@ function hideContent(projectID) {
     blurBackground.style.visibility = 'hidden';
     blurBackground.style.opacity = '0';
     project.style.display = 'none';
-    bodytag.style.overflow = 'scroll';
+    bodytag.style.overflow = 'auto';
 }
 
 function showDetails(projectID){
@@ -29,3 +29,4 @@ function showDetails(projectID){
     project.style.display = 'block';
     bodytag.style.overflow = 'hidden';
 }
+

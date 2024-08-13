@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer with Dots</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        #image-viewer {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        #image-viewer img {
+            max-width: 100%;
+            max-height: 100%;
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #image-viewer img.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-button {
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .nav-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div id="image-viewer">
+    <img src="image1.jpg" class="active" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <img src="image4.jpg" alt="Image 4">
+</div>
+
+<div class="nav-buttons">
+    <button class="nav-button" id="prev">Previous</button>
+    
+    <button class="nav-button" id="next">Next</button>
+</div>
+
+<div class="dots" id="dots-container"></div>
+
+<script>
+    const images = document.querySelectorAll('#image-viewer img');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const dotsContainer = document.getElementById('dots-container');
+    let currentIndex = 0;
+
+    // Create dots for each image
+    images.forEach((image, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) {
+            dot.classList.add('active');
+        }
+        dot.addEventListener('click', () => showImage(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.remove('active');
+            dots[i].classList.remove('active');
+            if (i === index) {
+                img.classList.add('active');
+                dots[i].classList.add('active');
+            }
+        });
+        currentIndex = index;
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    nextButton.addEventListener('click', showNextImage);
+    prevButton.addEventListener('click', showPrevImage);
+</script>
+
+</body>
+</html>

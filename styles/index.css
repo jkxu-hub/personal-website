@@ -49,8 +49,9 @@ p.about-me{
     min-height: 50vh;
     padding: 5%;
     color:white;
-    font-weight: 200;
-    font-size: 1.3rem;
+    font-weight: 250;
+    font-size: 1.7rem;
+    line-height: 50px ;
 }
 
 p.about-me:last-of-type{
@@ -63,6 +64,40 @@ p.about-me:last-of-type{
     height:100vh;
     background-attachment: fixed;
     background-size: cover;
+}
+
+@media (width >= 1750px) {
+    p.about-me{
+        font-size: 2rem;
+
+
+    }
+    .profile-pic{
+        height: 300px;
+        width:300px;
+        margin-top: -150px; /*height/2*/
+
+    }
+}
+
+  @media (width >= 1750px) {
+    p.about-me{
+        font-size: 2rem;
+
+
+    }
+    .profile-pic{
+        height: 300px;
+        width:300px;
+        margin-top: -150px; /*height/2*/
+
+    }
+}
+
+@media (width <= 550px) {
+    p.about-me{
+        font-size: 1.5rem;
+    }
 }
 
 

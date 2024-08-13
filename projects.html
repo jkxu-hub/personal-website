@@ -42,7 +42,7 @@
 
 
 
-            <h1> My Coding Projects</h1>
+            <h1 class = "main-header"> My Coding Projects</h1>
             <div class = "project">
                 <div class = "thumbnail pintos-img" onclick="showDetails('pintos-page')">
                     <p class = "thumbnail-text"> 
@@ -120,9 +120,8 @@
         </main>
 
         <footer>
-            <a href="/"> Email </a>
-            <a>Linkedin</a>
-            <a> Github</a>
+            <a href="https://www.linkedin.com/in/jeffrey-xu-ab879a219/">Linkedin</a>
+            <a href = "https://github.com/jkxu-hub" > Github</a>
         </footer>
 
         <!--Elements below are hidden by default -->
@@ -134,44 +133,60 @@
         </div>
 
         <div class = "project-details" id="pintos-page">
-            <div class= "left-container"> 
-                <h1 class = "project-detail-heading" >Pintos Operating System</h1>
-                <button class = "close" onclick="hideContent('pintos-page')">X</button>
 
-                <img src="images/pintos.png" alt="Pintos Image">
+            <h1 class = "project-detail-heading" >Pintos Operating System</h1>
+            <button class = "close" onclick="hideContent('pintos-page')">X</button>
+
+            <div class = "gallery">
+                <img class = "gallery-image" src="images/pintos.png" alt="Pintos Image">
+                <img class = "gallery-image hidden" src="images/pintos_terminal.png" alt="Pintos Image">
+                <img class = "gallery-image hidden" src="images/pintos_terminal.png" alt="Pintos Image">
             </div>
-            <div class= "right-container"> 
-                <p>
-                    <b>Description</b>
-                    A single threaded operating system framework for the 80x86 architecture. This project was done with a team of college classmates. The base code was written by Ben Pfaff, supporting only basic operating systems tasks like FIFO thread scheduling, boot support, and basic peripheral support. 
-                </p>
-                <div class = "middle-container">
-                    <div class = "link-container"> 
-                        <a href="github.com">Github </a>
+            <div class = "image-buttons">            
+                <button class="" id="previous" onclick="hideContent('pintos-page')">	&#9664</button>
+                <div class="dots" id="dots-container">...</div>
+                <button class="" id="next" onclick="hideContent('pintos-page')">	&#9654</button>
+            </div>
+
+            <p>
+                <b>Description:</b>
+                A single threaded operating system framework for the 80x86 architecture. This project was done with a team of college classmates. The base code was written by Ben Pfaff, supporting only basic operating systems tasks like FIFO thread scheduling, boot support, and basic peripheral support. 
+            </p>
+            <div class = "link-container"> 
+                <a class= "project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/github-logo.jpg);">
+
                     </div>
-                    <p>
-                        <b>Languages/Technology: </b>
-                        <ul>
-                            <li>C Programming Language</li>
-                            <li>Docker </li>
-                        </ul>
-                    </p>
-                </div>
+                    GitHub
+                </a>
 
-                <p>
-                    <b>Features Added</b>
-                    <ul>
-                        <li>A priority queue thread scheduler for the Pintos operating system to prevent thread starvation, improve CPU throughput, and enable efficient thread switching.</li>
+                <a class= "project-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/Youtube_logo.png);">
 
-                        <li>A syscall handler for the Pintos operating system allowing user programs to invoke kernel system calls.</li>
-
-                        <li>Virtual Memory support: an on demand paging system which enables segments of large programs to be swapped between ram and disk.
-                        </li>
-                    </ul>
-                </p>
+                    </div>
+                    Youtube
+                </a>
 
             </div>
+            <hr>
+            <p>
+                <b>Languages/Technologies Used: </b>
+                <ul>
+                    <li>C Programming Language</li>
+                    <li>Docker </li>
+                </ul>
+            </p>
+            <p>
+                <b>Features Added:</b>
+                <ul>
+                    <li>A priority queue thread scheduler for the Pintos operating system to prevent thread starvation, improve CPU throughput, and enable efficient thread switching.</li>
 
+                    <li>A syscall handler for the Pintos operating system allowing user programs to invoke kernel system calls.</li>
+
+                    <li>Virtual Memory support: an on demand paging system which enables segments of large programs to be swapped between ram and disk.
+                    </li>
+                </ul>
+            </p>
         </div>
 
         <div class = "project-details" id="webframework-page">

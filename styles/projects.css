@@ -31,13 +31,13 @@ main{
 .featured .featured-heading{
     color: white;
     
-    background-color: black;
+
     font-size: 2.4rem;
     position: absolute;
-    border: yellow 5px dotted;
+    text-shadow: 2px 2px 3px black;
     left: 2%;
     padding:10px;
-    box-shadow: 0 0 5px 5px yellow;
+
 }
 
 .featured #featured-text{
@@ -50,8 +50,9 @@ main{
     padding-right: 20%;
 }
 
-h1{
+h1.main-header{
     color:white;
+    text-shadow: 2px 2px 3px black;
 }
 
 /*|| Projects */
@@ -100,8 +101,8 @@ p.thumbnail-text{
     font-weight: 200;
 }
 
-/* || Project Detail Pages */
 
+/* || Project Detail Pages */
 #blur-background {
     position: fixed;
     top: 0;
@@ -128,7 +129,7 @@ p.thumbnail-text{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     height:85vh;
     width: 85vw;
-    overflow: scroll;
+    overflow: auto;
 }
 h1.project-detail-heading{
     color:black
@@ -147,7 +148,56 @@ img{
     position: fixed;
     top:10px;
     right:10px;
+}
 
+.project-details .link-container {
+    display: flex;
+}
+
+.button-thumbnail{
+    height:100%;
+    width:20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+a.project-link{
+    color: black;
+    background-color: white;
+    height: 30px;
+    width: 100px;
+    padding:5px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    text-decoration: none; 
+    font-size: .9rem;
+    margin-left:5px;
+}
+
+.gallery{
+    height:70%;
+    width:90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: black;
+}
+.gallery-image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.image-buttons{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hidden{
+    display: none;
 }
 
   

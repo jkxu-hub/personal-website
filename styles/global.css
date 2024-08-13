@@ -45,7 +45,8 @@ nav{
 
 nav .button-container{
     height: 100%;
-    width: 200px;
+    min-width: 250px;
+    width: 10%;
     justify-content: space-around;
     display: flex;
 }
@@ -90,5 +91,12 @@ footer{
 footer a {
     text-decoration: none;
 }
+
+@media screen and (min-width: 1750px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+  }
 
 
