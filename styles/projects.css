@@ -118,7 +118,7 @@ p.thumbnail-text{
 .project-details {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
@@ -127,7 +127,7 @@ p.thumbnail-text{
     background-color: #D9D9D9;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    height:85vh;
+    height:93vh;
     width: 85vw;
     overflow: auto;
 }
@@ -141,13 +141,17 @@ img{
 .project-details .close{
     background-color: red;
     color:white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 100px;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     position: fixed;
     top:10px;
-    right:10px;
+    right:20px;
+}
+
+.close:hover{
+    cursor: pointer;
 }
 
 .project-details .link-container {
@@ -176,31 +180,150 @@ a.project-link{
     margin-left:5px;
 }
 
+.caption{
+    position:absolute;
+    color: white;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    padding: 10px;
+    bottom: 0px;
+    font-size: .8rem;
+    text-align: center;
+    visibility: hidden;
+
+}
+
+/*|| Image Gallery*/
 .gallery{
-    height:70%;
-    width:90%;
+    height:63%;
+    width:100%;
     position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
     background-color: black;
 }
+
+.gallery:hover .caption{
+    visibility: hidden;
+}
+
 .gallery-image{
+    display: none;
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
-.image-buttons{
-    display: flex;
-    justify-content: center;
-    
-}
-
-.hidden{
+.hide{
     display: none;
 }
 
+/*Added to classlist of the image currently visible for a specific project*/
+.gallery:hover .show-caption{
+    visibility: visible;
+}
+
+.show{
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+
+
+}
+.dots{
+    display: flex;
+    
+}
+.dot{
+    background-color: gray;
+    margin: 5px;
+    margin-top:8px;
+    border: 2px black solid;
+    height: 5px; 
+    width: 5px;
+    padding: 3px;
+    border-radius: 100px;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.directional-button{
+    color:white;
+    background-color: gray;
+
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 100px;
+}
+
+.directional-button:hover{
+    cursor: pointer;
+    
+}
+
+a.inline-link{
+    color:black ;
+}
+
+a.inline-link:hover{
+    color:purple ;
+}
+
   
+/*|| Media Queries*/
+
+@media (width <= 800px) {
+    .project-details{
+        padding: 0px;
+    }
+    .project-details p{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .project-details ul{
+        padding-left: 10%;
+
+    }
+    .project-details .link-container{
+        padding-left: 5%;
+
+    }
+    .project-details h1{
+        padding-left: 5%;
+    }
+
+}
+
+@media (width >= 1750px) {
+    .caption{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (width <= 640px) {
+    .project-details{
+        width: 100vw;
+    }
+    .project-details .close{
+        top:5px;
+        right:5px;
+    }
+
+    .show-caption{
+        visibility: visible;
+    }
+
+
+
+}
+
 
 
   

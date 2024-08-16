@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title> About Me </title>
+        <title> Projects </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <!-- 
@@ -11,12 +11,13 @@
         <link rel="stylesheet" type="text/css" href="styles/projects.css" />
         <link rel="stylesheet" type="text/css" href="styles/images.css" />
         <link rel="stylesheet" type="text/css" href="styles/animation.css" />
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         
         <link rel="preconnect" href="https://rsms.me/">
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <script src="scripts/global.js" defer></script>
     </head>
-    <body id = "body">
+    <body>
         <nav class="site-nav" >
             <div class= "button-container">
                 <a class="site-nav" href="/"> Jeffrey Xu </a>
@@ -87,7 +88,7 @@
                         <br>
                         <br>
                         <b class ="subtext">
-                            A web scraper using the beautiful soup library that scrapes the post contents of a user on reddit and stores it in a database.
+                            A web scraper using the beautiful soup library that scrapes the post contents of a user on reddit.
                         </b>
                     </p>
                 </div>
@@ -111,7 +112,7 @@
                         <br>
                         <br>
                         <b class ="subtext">
-                            Ranking the most important statistics among NCAA championship qualifying basketball teams over the last 15 years.
+                            Ranking the most important statistics among NCAA championship qualifying basketball teams over the last decade.
                         </b>
                     </p>
                 </div>
@@ -120,53 +121,121 @@
         </main>
 
         <footer>
-            <a href="https://www.linkedin.com/in/jeffrey-xu-ab879a219/">Linkedin</a>
-            <a href = "https://github.com/jkxu-hub" > Github</a>
+            <a href = "https://github.com/jkxu-hub/personal-website" target="_blank" rel="noopener noreferrer"> Code</a>
+            <a href="https://www.linkedin.com/in/jeffrey-xu-ab879a219/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+            <a href = "https://github.com/jkxu-hub" target="_blank" rel="noopener noreferrer"> Github</a>
         </footer>
 
         <!--Elements below are hidden by default -->
         <div id="blur-background"></div>
 
+
         <div class = "project-details" id="sixerr-page">
-            sixerr-page
-            <button onclick="hideContent('sixerr-page')">Close</button>
-        </div>
 
-        <div class = "project-details" id="pintos-page">
-
-            <h1 class = "project-detail-heading" >Pintos Operating System</h1>
-            <button class = "close" onclick="hideContent('pintos-page')">X</button>
+            <h1 class = "project-detail-heading" >Sixerr</h1>
+            <button class = "close"> X </button>
 
             <div class = "gallery">
-                <img class = "gallery-image" src="images/pintos.png" alt="Pintos Image">
-                <img class = "gallery-image hidden" src="images/pintos_terminal.png" alt="Pintos Image">
-                <img class = "gallery-image hidden" src="images/pintos_terminal.png" alt="Pintos Image">
+                <img class = "gallery-image show" src="images/sixerr/sixerr.jpeg" alt="Sixerr Image">
+                <div class = "caption show-caption"> A poster displaying Sixerr. Presented at UB demo day. </div>
+
+                <img class = "gallery-image " src="images/sixerr/login.gif" alt="Sixerr Image">
+                <div class = "caption"> Logging into Sixerr. </div>
+
+                <img class = "gallery-image " src="images/sixerr/all_requests_Sixerr.gif" alt="Sixerr Image">
+                <div class = "caption"> The various Gigs available for purchase. </div>
+                <img class = "gallery-image " src="images/sixerr/search_Sixerr.gif" alt="Sixerr Image">
+                <div class = "caption"> Sixerr's search feature. </div>
             </div>
-            <div class = "image-buttons">            
-                <button class="" id="previous" onclick="hideContent('pintos-page')">	&#9664</button>
-                <div class="dots" id="dots-container">...</div>
-                <button class="" id="next" onclick="hideContent('pintos-page')">	&#9654</button>
+            <div class="navigation">
+                <button class = "left-button directional-button"> ◀ </button>
+                <div class = "dots">
+
+                </div>
+                <button class = "right-button directional-button"> ▶ </button>
             </div>
 
             <p>
                 <b>Description:</b>
-                A single threaded operating system framework for the 80x86 architecture. This project was done with a team of college classmates. The base code was written by Ben Pfaff, supporting only basic operating systems tasks like FIFO thread scheduling, boot support, and basic peripheral support. 
+                A marketplace site for the Gig Economy. Inspired by Craigslist and the laissez-faire attitude the site had towards items and services it sold, the project's goal is to create a site that is open ended with the products and services sold, while enabling sustainable local commerce.  <br><br>
+                Featured at the University at Buffalo's 2023 <a class = "inline-link" href = "https://ub-cse-demo-day.github.io/by_year/2023sp" target="_blank" rel="noopener noreferrer">Demo Day</a>!
+                
             </p>
             <div class = "link-container"> 
-                <a class= "project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer"> 
+                <a class= "project-link" href="https://github.com/cse442-at-ub/project_s23-team-sixerr" target="_blank" rel="noopener noreferrer"> 
                     <div class="button-thumbnail" style="background-image: url(../images/github-logo.jpg);">
 
                     </div>
                     GitHub
                 </a>
+                <a class= "project-link" href="https://www.figma.com/design/5aPHWSVLDnh8X3zu5ln82w/Sixerr-Website-(all-pages)?node-id=0-1" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/Figma-logo.png);">
+    
+                    </div>
+                    Figma
+                </a>
+            </div>
 
-                <a class= "project-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"> 
-                    <div class="button-thumbnail" style="background-image: url(../images/Youtube_logo.png);">
+            <hr>
+            <p>
+                <b>Languages/Technologies Used: </b>
+                <ul>
+                    <li>PHP</li>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ul>
+            </p>
+            <p>
+                <b>Features:</b>
+                <ul>
+                    <li>A page for creating gig listings as a person or business in need of a service.</li>
+                    <li>A website account that can be used to manage the gigs a person is doing for someone else and the gigs that they themselves are requesting someone to perform.</li>
+                    <li>A page for exploring all of the Gigs available on the site.</li>
+                    <li>A search feature to find relevant gigs.</li>
+                    <li>A profile page that facilitates communication on other sites like discord or instagram.</li>
+                    <li>Moderation accounts to remove inappropriate posts.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class = "project-details" id="pintos-page">
+
+            <h1 class = "project-detail-heading" >Pintos Operating System</h1>
+            <button class = "close"> X </button>
+
+            <div class = "gallery">
+                <img class = "gallery-image show" src="images/pintos/pintos.png" alt="Pintos Image">
+                <div class = "caption show-caption"> A diagram displaying the various features added by students who program on the pintos project. </div>
+
+                <img class = "gallery-image " src="images/pintos/ubuntu_bochs_pintos.png" alt="Pintos Image">
+                <div class = "caption"> Bochs simulator simulating Pintos, shown are 5 threads sleeping. </div>
+
+                <img class = "gallery-image " src="images/pintos/alarm-multiple.png" alt="Pintos Image">
+                <div class = "caption"> Pintos running a user program. </div>
+                <img class = "gallery-image " src="images/pintos/pintos_workflow.png" alt="Pintos Image">
+                <div class = "caption"> The text editor I used on the project. </div>
+            </div>
+            <div class="navigation">
+                <button class = "left-button directional-button"> ◀ </button>
+                <div class = "dots">
+
+                </div>
+                <button class = "right-button directional-button"> ▶ </button>
+            </div>
+
+            <p>
+                <b>Description:</b>
+                A single threaded operating system framework for the 80x86 architecture. This project was done with a team of college classmates. The base code was written by <a class = "inline-link" href = "https://benpfaff.org/papers/pintos.pdf" target="_blank" rel="noopener noreferrer">Ben Pfaff</a>, supporting only basic operating systems tasks like FIFO thread scheduling, boot support, and basic peripheral support. 
+            </p>
+            <div class = "link-container"> 
+                <a class= "project-link" href="https://github.com/jkxu-hub/pintos-operating-system/" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/github-logo.jpg);">
 
                     </div>
-                    Youtube
+                    GitHub
                 </a>
-
             </div>
             <hr>
             <p>
@@ -190,29 +259,282 @@
         </div>
 
         <div class = "project-details" id="webframework-page">
-            webframework-page
-            <button onclick="hideContent('webframework-page')">Close</button>
+
+            <h1 class = "project-detail-heading" >Custom Web Framework</h1>
+            <button class = "close"> X </button>
+
+            <div class = "gallery">
+                <img class = "gallery-image show" src="images/webframework/request_class.png" alt="webframework-page Image">
+                <div class = "caption show-caption"> Code Snippet from the Request Class. </div>
+
+                <img class = "gallery-image " src="images/webframework/cookie_processing_class.png" alt="webframework-page Image">
+                <div class = "caption"> Code Snippet from the Cookie Processing Class. </div>
+
+                <img class = "gallery-image " src="images/webframework/websocket_api_snippet.png" alt="webframework-page Image">
+                <div class = "caption"> Code Snippet from the websocket API. </div>
+
+                <img class = "gallery-image " src="images/webframework/html_templating_snippet.png" alt="webframework-page Image">
+                <div class = "caption"> HTML templating API that enables server side rendering of HTML pages. </div>
+
+            </div>
+            <div class="navigation">
+                <button class = "left-button directional-button"> ◀ </button>
+                <div class = "dots">
+
+                </div>
+                <button class = "right-button directional-button"> ▶ </button>
+            </div>
+
+            <p>
+                <b>Description:</b>
+                A library of classes and functions implementing and augmenting the HTTP and Websocket protocols.
+            </p>
+            <div class = "link-container"> 
+                <a class= "project-link" href="https://github.com/jkxu-hub/Image-Sharing-Site" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/github-logo.jpg);">
+
+                    </div>
+                    GitHub
+                </a>
+            </div>
+
+            <hr>
+            <p>
+                <b>Languages/Technologies Used: </b>
+                <ul>
+                    <li>Scala</li>
+                    <li>Docker </li>
+                </ul>
+            </p>
+            <p>
+                <b>Features Added:</b>
+                <ul>
+                    <li>A Scala class that enables the instantiation of an object that contains the fields and payload of an HTTP message sent over a TCP connection. The class supports buffering of payload messages (appending multiple messages from a TCP stream) for large file uploads.</li>
+
+                    <li>A Scala class that enables the instantiation of an object that contains the cookies of an incoming HTTP request and the cookies that should be sent in an outgoing HTTP response.</li>
+
+                    <li>An API for parsing websocket data sent over a TCP connection.
+                    </li>
+
+                    <li>An API for building HTTP response messages.
+                    </li>
+                </ul>
+            </p>
         </div>
 
         <div class = "project-details" id="imagesharing-page">
-            imagesharing-page
-            <button onclick="hideContent('imagesharing-page')">Close</button>
+
+            <h1 class = "project-detail-heading" >Image Sharing Site</h1>
+            <button class = "close"> X </button>
+
+            <div class = "gallery">
+                <img class = "gallery-image show" src="images/image_site/imagesharing-home.png" alt="Sharing Image">
+                <div class = "caption show-caption"> Images shared on the homepage </div>
+
+                <img class = "gallery-image " src="images/image_site/image-submit.png" alt="Sharing Image">
+                <div class = "caption"> Successful image submission </div>
+
+                <img class = "gallery-image " src="images/image_site/database_snippet.png" alt="Sharing Image">
+                <div class = "caption"> A snippet from the database used for this site. </div>
+
+            </div>
+            <div class="navigation">
+                <button class = "left-button directional-button"> ◀ </button>
+                <div class = "dots">
+
+                </div>
+                <button class = "right-button directional-button"> ▶ </button>
+            </div>
+
+            <p>
+                <b>Description:</b>
+                A simple image sharing site that utilizes the web framework that I personally created. Complete with a fully functional server and database. Currently the site can be run locally using docker. An actual deployment is in progress…
+            </p>
+
+            <div class = "link-container"> 
+                <a class= "project-link" href="https://github.com/jkxu-hub/Image-Sharing-Site" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/github-logo.jpg);">
+
+                    </div>
+                    GitHub
+                </a>
+            </div>
+
+            <hr>
+            <p>
+                <b>Languages/Technologies Used: </b>
+                <ul>
+                    <li>Scala</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>SQL</li>
+                    <li>Docker</li>
+                </ul>
+            </p>
+            <p>
+                <b>Features:</b>
+                <ul>
+                    <li>The site allows for large image uploads, posts, comments, user accounts, and a global chat feature.</li>
+                </ul>
+            </p>
         </div>
 
         <div class = "project-details" id="reddit-page">
-            reddit-page
-            <button onclick="hideContent('reddit-page')">Close</button>
+
+            <h1 class = "project-detail-heading" >Reddit Content Scraper </h1>
+            <button class = "close"> X </button>
+
+            <div class = "gallery">
+                <img class = "gallery-image show" src="images/reddit_scraper/reddit.png" alt="Sharing Image">
+                <div class = "caption show-caption"> Reddit </div>
+
+
+            </div>
+            <div class="navigation">
+                <button class = "left-button directional-button"> ◀ </button>
+                <div class = "dots">
+
+                </div>
+                <button class = "right-button directional-button"> ▶ </button>
+            </div>
+
+            <p>
+                <b>Description:</b>
+                A web scraper using the beautiful soup library that scrapes the post contents of a user on reddit. Run the program using a CLI. The app is still in progress.
+            </p>
+
+            <div class = "link-container"> 
+                <a class= "project-link" href="https://github.com/jkxu-hub/reddit-content-scraper" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/github-logo.jpg);">
+
+                    </div>
+                    GitHub
+                </a>
+            </div>
+
+            <hr>
+            <p>
+                <b>Languages/Technologies Used: </b>
+                <ul>
+                    <li>Python</li>
+                </ul>
+            </p>
         </div>
 
         <div class = "project-details" id="raft-page">
-            Raft
-            <button onclick="hideContent('raft-page')">Close</button>
+
+            <h1 class = "project-detail-heading" >Raft Distributed Consensus</h1>
+            <button class = "close"> X </button>
+
+            <div class = "gallery">
+                <img class = "gallery-image show" src="images/raft/raft.png" alt="Pintos Image">
+                <div class = "caption show-caption"> A diagram displaying the operations of raft. </div>
+
+                <img class = "gallery-image " src="images/raft/raft_leader_routine.png" alt="Pintos Image">
+                <div class = "caption"> A raft leader routine. Run concurrently in a Go routine. </div>
+
+                <img class = "gallery-image " src="images/raft/raft_candidate.png" alt="Pintos Image">
+                <div class = "caption"> A candidate routine. Run concurrently in a Go routine. </div>
+                <img class = "gallery-image " src="images/raft/raft_follower.png" alt="Pintos Image">
+                <div class = "caption"> A follower routine. Run concurrently in a Go routine. </div>
+                <img class = "gallery-image " src="images/raft/starts_it_up.png" alt="Pintos Image">
+                <div class = "caption"> The go thread that starts up the dance between leader, candidate, and follower. </div>
+                <img class = "gallery-image " src="images/raft/raft_leader_election.png" alt="Pintos Image">
+                <div class = "caption"> Success! </div>
+            </div>
+            <div class="navigation">
+                <button class = "left-button directional-button"> ◀ </button>
+                <div class = "dots">
+
+                </div>
+                <button class = "right-button directional-button"> ▶ </button>
+            </div>
+
+            <p>
+                <b>Description:</b>
+                A Go programming language implementation of the Raft distributed consensus algorithm. Raft is a protocol for managing the data of replica servers, if a replica server fails but later recovers, Raft brings the replica server’s data up to date.
+            </p>
+            <div class = "link-container"> 
+                <a class= "project-link" href="https://github.com/jkxu-hub/raft-distributed-consensus/" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/github-logo.jpg);">
+
+                    </div>
+                    GitHub
+                </a>
+            </div>
+            <hr>
+            <p>
+                <b>Languages/Technologies Used: </b>
+                <ul>
+                    <li>Go Programming Language</li>
+                    <li>Docker </li>
+                </ul>
+            </p>
         </div>
         
         <div class = "project-details" id="ncaa-page">
-            NCAA
-            <button onclick="hideContent('ncaa-page')">Close</button>
-        </div>
 
+            <h1 class = "project-detail-heading" >NCAA Championship Classifier</h1>
+            <button class = "close"> X </button>
+
+            <div class = "gallery">
+                <img class = "gallery-image show" src="images/ncaa_classifier/kaggle_dataset.png" alt="NCAA Image">
+                <div class = "caption show-caption"> The dataset analyzed which was acquired from Kaggle. </div>
+
+                <img class = "gallery-image " src="images/ncaa_classifier/college_basketball_background.png" alt="NCAA Image">
+                <div class = "caption"> NCAA tournament background. </div>
+
+                <img class = "gallery-image " src="images/ncaa_classifier/confusion_matrix.png" alt="NCAA Image">
+                <div class = "caption"> Confusion matrices comparing two different classifier algorithms. </div>
+                <img class = "gallery-image " src="images/ncaa_classifier/correlation_matrix.png" alt="NCAA Image">
+                <div class = "caption"> The correlation matrix genereated by running logistic regression on the dataset </div>
+                <img class = "gallery-image " src="images/ncaa_classifier/logistic_regression_buffalo.png" alt="NCAA Image">
+                <div class = "caption"> Statistics relevant to the University at Buffalo. </div>
+
+
+            </div>
+            <div class="navigation">
+                <button class = "left-button directional-button"> ◀ </button>
+                <div class = "dots">
+
+                </div>
+                <button class = "right-button directional-button"> ▶ </button>
+            </div>
+
+            <p>
+                <b>Description:</b>
+                A data science project where I used statistical models and python to rank the most important statistics among NCAA championship qualifying basketball teams over the last decade. An analysis of the difference in the most important statistics for lower budget schools, schools in the early 2010s, and in the late 2020s was made. The goal of the project was to analyze the statistics that have historically been important to the different demographics of NCAA basketball teams.
+            </p>
+            <div class = "link-container"> 
+                <a class= "project-link" href="https://github.com/jkxu-hub/ncaa-championship-classifier" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/github-logo.jpg);">
+                    </div>
+                    GitHub
+                </a>
+                <a class= "project-link" href="https://www.youtube.com/watch?v=25htrKC7lDE" target="_blank" rel="noopener noreferrer"> 
+                    <div class="button-thumbnail" style="background-image: url(../images/Youtube_logo.png);">
+                    </div>
+                    Youtube
+                </a>
+
+            </div>
+            <hr>
+            <p>
+                <b>Languages/Technologies Used: </b>
+                <ul>
+                    <li>Python</li>
+                </ul>
+            </p>
+            <p>
+                <b>Features:</b>
+                <ul>
+                    <li>Cleaned datasets acquired from kaggle about college basketball statistics.</li>
+
+                    <li>Utilized the scikit-learn, pandas, and numpy to compare the performance of logistic regressions, decision trees, k-nearest-neighbors, and support vector machines in classifying whether a team will qualify for the NCAA Championship.</li>
+
+                </ul>
+            </p>
+        </div>
     </body>
 </html>
